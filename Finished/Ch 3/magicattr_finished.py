@@ -44,9 +44,12 @@ b2 = Book("The Catcher in the Rye", "JD Salinger", 29.95)
 # Try setting and accessing the price
 b1.price = 38.95
 print(b1)
+print(b1.price)
 
 b2.price = float(40)  # using an int will raise an exception
 print(b2)
 
 # If an attribute doesn't exist, __getattr__ will be called
 print(b1.randomprop)
+
+print(b2.__getattribute__('price'))

@@ -1,8 +1,8 @@
 # Python Object Oriented Programming by Joe Marini course example
 # Using Abstract Base Classes to enforce class constraints
 
-
-class GraphicShape:
+from abc import ABC, abstractmethod
+class GraphicShape(ABC):
     def __init__(self):
         super().__init__()
 
@@ -21,8 +21,8 @@ class Square(GraphicShape):
 
 
 g = GraphicShape()
-
-c = Circle(10)
-print(c.calcArea())
-s = Square(12)
-print(s.calcArea())
+print(g)
+# c = Circle(10)
+# print(c.calcArea())
+# s = Square(12)
+# print(s.calcArea())

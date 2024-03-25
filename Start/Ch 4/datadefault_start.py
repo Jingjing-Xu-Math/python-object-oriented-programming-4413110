@@ -7,7 +7,11 @@ from dataclasses import dataclass
 @dataclass
 class Book:
     # you can define default values when attributes are declared
-    title: str
-    author: str
-    pages: int
+    title: str = 'No titil'
+    author: str = 'No author'
+    pages: int = 0
     price: float
+
+
+b1=Book(price=6.0)
+print(b1)

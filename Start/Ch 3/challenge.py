@@ -24,6 +24,12 @@ class Stock(Asset):
         self.ticker = ticker
 
 
+    def __str__(self):
+        return f"The stock {self.ticker} has price {self.price}$"
+
+    def __lt__(self,other):
+        return self.price<other.price
+
 class Bond(Asset):
     def __init__(self, price, description, duration, yieldamt):
         super().__init__(price)
@@ -31,6 +37,11 @@ class Bond(Asset):
         self.duration = duration
         self.yieldamt = yieldamt
 
+    def __str__(self):
+        return f"The bond {self.description} had yield {self.yieldamt}%"
+
+    def __lt__(self,other):
+        return self.yieldamt<other.yieldamt
 
 # ~~~~~~~~~ TEST CODE ~~~~~~~~~
 stocks = [

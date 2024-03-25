@@ -36,7 +36,7 @@ class Book:
 
 
 # TODO: access the class attribute
-print("Book types: ", Book.get_book_types())
+# print("Book types: ", Book.get_book_types())
 
 # TODO: Create some book instances
 b1 = Book("Title 1", "HARDCOVER")
@@ -44,6 +44,18 @@ b2 = Book("Title 2", "PAPERBACK")
 
 # TODO: Use the static method to access a singleton object
 thebooks = Book.get_booklist()
+print(type(thebooks))
+
+print('-'*55)
 thebooks.append(b1)
+print(thebooks)
+print('-'*55)
 thebooks.append(b2)
 print(thebooks)
+
+
+thebooks.append(b1)
+
+print('-'*55)
+
+print(Book.get_booklist()[0].title)
